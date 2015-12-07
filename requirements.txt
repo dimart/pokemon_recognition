@@ -1,0 +1,7 @@
+bunch==1.0.1
+matplotlib==1.5.0
+numpy==1.10.1
+Pillow==3.0.0
+pylab==0.1.3
+scikit-learn==0.17
+scipy==0.16.1
