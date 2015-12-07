@@ -1,18 +1,21 @@
-import numpy as np
-from bunch import Bunch
 from os import listdir, makedirs
 from os.path import join, exists, isdir
-from scipy.misc import imread
-import matplotlib.pyplot as pl
 from time import time
+
+import numpy as np
+
+from sklearn.cross_validation import KFold
 from sklearn.grid_search import GridSearchCV
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.decomposition import PCA
 from sklearn.svm import SVC
-from PIL import Image, ImageOps
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.cross_validation import KFold
+
+import matplotlib.pyplot as pl
+from scipy.misc import imread
+from PIL import Image, ImageOps
+from bunch import Bunch
 
 POKEMON_PATH = './pokemon'
 POKEMON_PROC_PATH = './pokemon_processed'

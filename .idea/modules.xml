@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pca_with_pokemon.iml" filepath="$PROJECT_DIR$/.idea/pca_with_pokemon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pokemon_recognition.iml" filepath="$PROJECT_DIR$/.idea/pokemon_recognition.iml" />
     </modules>
   </component>
 </project>
