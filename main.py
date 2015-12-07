@@ -119,7 +119,7 @@ def main():
         # Apply PCA
         n_components = 18  # 80%
         pca = PCA(n_components=n_components, whiten=True).fit(X_train)
-        eigenfaces = pca.components_.reshape((n_components, h, w))
+        eigenpokemons = pca.components_.reshape((n_components, h, w))
 
         print "Projecting the input data on the eigenpokemon orthonormal basis"
         X_train_pca = pca.transform(X_train)
@@ -130,7 +130,7 @@ def main():
         # im.show()
 
         ###############################################################################
-        # Train a SVM classification model
+        # Train an SVM classification model
         print "Fitting the classifier to the training set"
         param_grid = {
                 'kernel': ['rbf', 'linear'],
@@ -160,10 +160,10 @@ def main():
         # View results
         prediction_titles = [title(y_pred, y_test, pokemon.target_names, i)
                              for i in range(y_pred.shape[0])]
-        eigenface_titles = ["eigenface %d" % i for i in range(eigenfaces.shape[0])]
+        eigenpokemons_titles = ["eigenpokemon %d" % i for i in range(eigenpokemons.shape[0])]
 
         plot_gallery(X_test, prediction_titles, h, w)
-        plot_gallery(eigenfaces, eigenface_titles, h, w)
+        plot_gallery(eigenpokemons, eigenpokemons_titles, h, w)
         pl.show()
 
     print "Computed in %0.3fs" % (time() - t0)
